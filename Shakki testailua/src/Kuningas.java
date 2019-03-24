@@ -5,8 +5,6 @@ public class Kuningas extends Nappula{
 	}
 	
 	public boolean Onkosiirtosallittu(int x, int y){
-		boolean a = true;
-		boolean b = false;
 		if (elossa == 1) {
 			if (y > 0 && y <= 8 && x > 0 && x <= 8) {
 				if( (x == this.sijaintiX && y == this.sijaintiY +1)
@@ -17,18 +15,18 @@ public class Kuningas extends Nappula{
 					|| (x == this.sijaintiX -1 && y == this.sijaintiY -1)
 					|| (x == this.sijaintiX +1&& y == this.sijaintiY -1)
 					|| (x == this.sijaintiX -1 && y == this.sijaintiY +1)){
-					return a;
+					return true;
 				}
 				else {
-					return b;
+					return false;
 				}
 			}
 			else {
-				return b;
+				return false;
 			}
 		}
 		else {
-			return b;
+			return false;
 		}
 	}
 }
