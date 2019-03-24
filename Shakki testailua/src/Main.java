@@ -3,24 +3,24 @@ import java.util.List;
 import java.util.Scanner;
 public class Main {
   public static void main(String[] args) {
-	  
+	  //kirjoittamalla tallenna kun ohjelma kysyy AnnaAlkuX voit kirjoittaa tallenna ja peli rulostaa sinulle lukujonon jonka voit kopioida talteen
 	  //ensiksi luomme pelialudan johon voimme tallentaa nappuloita
-	  //koska lista on yksi uloitteinen sovimme ett‰ kymmenet tarkoittavat
-	  //x koordinaattia ja ykkˆset y koordinaattia
+	  //koska lista on yksi uloitteinen sovimme ett√§ kymmenet tarkoittavat
+	  //x koordinaattia ja ykk√∂set y koordinaattia
 	  //eli esim (3, 6) on pelilaudassa indeksin 36 kohdassa
-	  //t‰m‰ muoto saadaan kertomalla x koordinaatti kymmenll‰ ja lis‰‰m‰ll‰ y
-	  //t‰m‰n tekniikan k‰yttˆ tapahtuu t‰ss‰ luokassa kun siirr‰mme nappulaa
+	  //t√§m√§ muoto saadaan kertomalla x koordinaatti kymmenll√§ ja lis√§√§m√§ll√§ y
+	  //t√§m√§n tekniikan k√§ytt√∂ tapahtuu t√§ss√§ luokassa kun siirr√§mme nappulaa
 	  ArrayList<Nappula> pelilauta = new ArrayList<Nappula>();
 	  //alustamme pelailaudan 96 nullilla koska 88 antoi poikkeuksen
-	  //nullien m‰‰r‰ll‰ ei ole v‰li‰ koska Onkosiirtosallittu() metodi
-	  //testaa tapahtuuko siirto pelirajojen sis‰ll‰
+	  //nullien m√§√§r√§ll√§ ei ole v√§li√§ koska Onkosiirtosallittu() metodi
+	  //testaa tapahtuuko siirto pelirajojen sis√§ll√§
 	  String tyhjapai = "-----------";
 	  Tyhjanappula tyhja = new Tyhjanappula(0, 0, 0, 1, tyhjapai);
 	  for(int i = 0; i<8*12; i++) {
 			pelilauta.add(i, tyhja);
 		}
-	  	// alustetaan string muuttujat joihin nappuloiden nimi-atribuuttia voidaan myˆhemmin verrata
-	    // N‰in selvitet‰‰n mink‰ nappulan Onkosiirtosallittu() metodi suoritetaan
+	  	// alustetaan string muuttujat joihin nappuloiden nimi-atribuuttia voidaan my√∂hemmin verrata
+	    // N√§in selvitet√§√§n mink√§ nappulan Onkosiirtosallittu() metodi suoritetaan
 	  // tallenna ja lataa stringit kertovat jos pelaaja haluaa tallentaa tai ladata pelin
 	  
 	    String tallenna = "tallenna";
@@ -43,11 +43,11 @@ public class Main {
 	  	String Vkuningatar = "Vkuningatar";
 		
 	  	//seuraavaksi alustetaan nappulat
-	  	//ensimm‰inen paremetri on x sijainti toinen y kolmas on v‰ri
+	  	//ensimm√§inen paremetri on x sijainti toinen y kolmas on v√§ri
 	  	//neljas on kertoo onko nappula elossa 1 = on
-	  	//elossa olisi j‰rkev‰mpi olla boolean mutta olimme jo alustaneet ne n‰in
+	  	//elossa olisi j√§rkev√§mpi olla boolean mutta olimme jo alustaneet ne n√§in
 	  	
-	  	//n‰m‰ t:ll‰ alkavat objektit ovat metodin k‰yttˆˆ tarkoitettuja jotta oikeiden nappuloiden sijainti ei muuttuisi v‰‰r‰ksi.
+	  	//n√§m√§ t:ll√§ alkavat objektit ovat metodin k√§ytt√∂√∂ tarkoitettuja jotta oikeiden nappuloiden sijainti ei muuttuisi v√§√§r√§ksi.
 	  	
 	  	Sotilas TS1 = new Sotilas(0, 0, 0, 1, sotilas);
 	  	Hevonen TH1 = new Hevonen(0, 0, 0, 1, hevonen);
@@ -175,22 +175,22 @@ public class Main {
 			System.out.println("|"+ pelilauta.get(12).annaNappula() + "|" + pelilauta.get(22).annaNappula() + "|" + pelilauta.get(32).annaNappula() + "|" + pelilauta.get(42).annaNappula() + "|" + pelilauta.get(52).annaNappula() +"|" + pelilauta.get(62).annaNappula() + "|" + pelilauta.get(72).annaNappula() + "|" + pelilauta.get(82).annaNappula() + "|");
 			System.out.println("|"+ pelilauta.get(11).annaNappula() + "|" + pelilauta.get(21).annaNappula() + "|" + pelilauta.get(31).annaNappula() + "|" + pelilauta.get(41).annaNappula() + "|" + pelilauta.get(51).annaNappula() +"|" + pelilauta.get(61).annaNappula() + "|" + pelilauta.get(71).annaNappula() + "|" + pelilauta.get(81).annaNappula() + "|");
 			System.out.println("________________________________________________________________________________________________");
-		//kysyt‰‰n l‰htˆ x-koordinaattia
+		//kysyt√§√§n l√§ht√∂ x-koordinaattia
 		Scanner input = new Scanner (System.in);
 	    System.out.print("Anna Alku x: ");
 	    String AlkuX = input.next();
-	   //jos pelaaja haluaa tallentaa h‰n kirjoittaa tallenna ja siirryt‰‰n tallennukseen
+	   //jos pelaaja haluaa tallentaa h√§n kirjoittaa tallenna ja siirryt√§√§n tallennukseen
 	    if (AlkuX.contentEquals(tallenna)) {
 	    	System.out.println("Ota seuraava lista talteen: ");
 	    	System.out.println("0"+","+MS1.annaSijaintiX()+","+MS1.annaSijaintiY()+","+MS2.annaSijaintiX()+","+MS2.annaSijaintiY()+","+MS3.annaSijaintiX()+","+MS3.annaSijaintiY()+","+MS4.annaSijaintiX()+","+MS4.annaSijaintiY()+","+MS5.annaSijaintiX()+","+MS5.annaSijaintiY()+","+MS6.annaSijaintiX()+","+MS6.annaSijaintiY()+","+MS7.annaSijaintiX()+","+MS7.annaSijaintiY()+","+MS8.annaSijaintiX()+","+MS8.annaSijaintiY()+","+VS1.annaSijaintiX()+","+VS1.annaSijaintiY()+","+VS2.annaSijaintiX()+","+VS2.annaSijaintiY()+","+VS3.annaSijaintiX()+","+VS3.annaSijaintiY()+","+VS4.annaSijaintiX()+","+VS4.annaSijaintiY()+","+VS5.annaSijaintiX()+","+VS5.annaSijaintiY()+","+VS6.annaSijaintiX()+","+VS6.annaSijaintiY()+","+VS7.annaSijaintiX()+","+VS7.annaSijaintiY()+","+VS8.annaSijaintiX()+","+VS8.annaSijaintiY()+","+MT1.annaSijaintiX()+","+MT1.annaSijaintiY()+","+MT2.annaSijaintiX()+","+MT2.annaSijaintiY()+","+VT1.annaSijaintiX()+","+VT1.annaSijaintiY()+","+VT2.annaSijaintiX()+","+VT2.annaSijaintiY()+","+MH1.annaSijaintiX()+","+MH1.annaSijaintiY()+","+MH2.annaSijaintiX()+","+MH2.annaSijaintiY()+","+VH1.annaSijaintiX()+","+VH1.annaSijaintiY()+","+VH2.annaSijaintiX()+","+VH2.annaSijaintiY()+","+ML1.annaSijaintiX()+","+ML1.annaSijaintiY()+","+ML2.annaSijaintiX()+","+ML2.annaSijaintiY()+","+VL1.annaSijaintiX()+","+VL1.annaSijaintiY()+","+VL2.annaSijaintiX()+","+VL2.annaSijaintiY()+","+MK.annaSijaintiX()+","+MK.annaSijaintiY()+","+VK.annaSijaintiX()+","+VK.annaSijaintiY()+","+MQ.annaSijaintiX()+","+MQ.annaSijaintiY()+","+VQ.annaSijaintiX()+","+VQ.annaSijaintiY());
-	    	//tallennus toimii sill‰ periaatteella ett‰ ohjelma tulostaa listan kaiskista sijainneista ja k‰ytt‰j‰ kopioi t‰m‰n kuten yll‰ n‰kyy
+	    	//tallennus toimii sill√§ periaatteella ett√§ ohjelma tulostaa listan kaiskista sijainneista ja k√§ytt√§j√§ kopioi t√§m√§n kuten yll√§ n√§kyy
 			
 			continue;
 	    }
-	    //jos pelaaja haluaa ladata siirryt‰‰n seuraavaan osioon
+	    //jos pelaaja haluaa ladata siirryt√§√§n seuraavaan osioon
 	    if (AlkuX.contentEquals(lataa)) {
 	    	
-	    	 System.out.print("Anna ladattava peli ilman v‰lej‰ koska emme osaa koodata: ");
+	    	 System.out.print("Anna ladattava peli ilman v√§lej√§ koska emme osaa koodata: ");
 	 	       String Ladattavatiedosto = input.next();
 
 	 	       
@@ -253,7 +253,7 @@ public class Main {
 	 	        	MQ.asetaSijainti(intArrayList.get(61), intArrayList.get(62));
 	 	        	VQ.asetaSijainti(intArrayList.get(63), intArrayList.get(64));
 	 	        	
-	 	        	//sitten nappulat t‰ytyy viel‰ asettaa pelilaudalle
+	 	        	//sitten nappulat t√§ytyy viel√§ asettaa pelilaudalle
 	 	        	
 	 	        	
 	 	        	
@@ -324,14 +324,14 @@ public class Main {
 	    
 	    
 	    // ensiksi kysytaan onko kyseisesa paikassa nappulaa
-	    // jos nappulaa ei ole metodit heitt‰isiv‰t poikkeuksen
+	    // jos nappulaa ei ole metodit heitt√§isiv√§t poikkeuksen
 	    //sitten kokeillaan onko elossa
-	    // seuraavaksi selvitet‰‰n mik‰ nappula on kyseess‰
-	    // riippuen mik‰ nappula olikyseess‰ suoritaan metodi k‰ytt‰m‰ll‰ 
+	    // seuraavaksi selvitet√§√§n mik√§ nappula on kyseess√§
+	    // riippuen mik√§ nappula olikyseess√§ suoritaan metodi k√§ytt√§m√§ll√§ 
 	    // oikeaa testinappulaa
 	    // jos siirto toteutti kaikki vaiheet asetetaan uusi sijainti
-	    // asetetaan nappulan elossa tila kuolleeksi joka sijaitsi kohadass mink‰ p‰‰lle uusi nappula asetettiin
-	    //kuten n‰kyy kerromme x koordinaatin 10 ja lis‰‰mme y jotta voimme k‰ytt‰‰ yksiuloitteista listaa
+	    // asetetaan nappulan elossa tila kuolleeksi joka sijaitsi kohadass mink√§ p√§√§lle uusi nappula asetettiin
+	    //kuten n√§kyy kerromme x koordinaatin 10 ja lis√§√§mme y jotta voimme k√§ytt√§√§ yksiuloitteista listaa
 	    if (pelilauta.get(intAlkux*10 + intAlkuy) != tyhja) {
 	    	Nappula siirrettava = pelilauta.get(intAlkux*10 + intAlkuy);
 	    	String nimi = siirrettava.annaNappula();
