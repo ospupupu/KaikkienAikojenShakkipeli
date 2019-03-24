@@ -190,7 +190,7 @@ public class Main {
 	    //jos pelaaja haluaa ladata siirrytään seuraavaan osioon
 	    if (AlkuX.contentEquals(lataa)) {
 	    	
-	    	 System.out.print("Anna ladattava peli ilman välejä koska emme osaa koodata: ");
+	    	 System.out.print("Anna ladattava peli: ");
 	 	       String Ladattavatiedosto = input.next();
 
 	 	       
