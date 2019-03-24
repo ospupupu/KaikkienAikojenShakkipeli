@@ -3,50 +3,48 @@ public class Kuningatar extends Nappula{
 		super(SijaintiX, SijaintiY, vari, elossa, type);
 	}
 	public boolean Onkosiirtosallittu(int x, int y) {
-		boolean a = true;
-		boolean b = false;
 		if (elossa == 0) {
 			if (y > 0 && y <= 8 && x > 0 && x <= 8) {
 				if (x < sijaintiX) {
 					if (y < sijaintiY) {
 						if (sijaintiX - x == sijaintiY - y) {
-							return a;
+							return true;
 						}
 						else {
 							if (x < sijaintiX) {
 								if (y < sijaintiY) {
 									if (sijaintiX - x == sijaintiY - y) {
-										return a;
+										return true;
 									}
 									else {
-										return b;
+										return false;
 									}
 							
 								}
 								else {
 									if (sijaintiX - x == y - sijaintiY) {
-										return a;
+										return true;
 									}
 									else {
-										return b;
+										return false;
 									}
 								}
 							}
 							else {
 								if (y < sijaintiY) {
 									if (x - sijaintiX == sijaintiY - y) {
-										return a;
+										return true;
 									}
 									else {
-										return b;
+										return false;
 									}
 								}
 								else {
 									if (x - sijaintiX == y - sijaintiY) {
-										return a;
+										return true;
 									}
 									else {
-										return b;
+										return false;
 									}
 								}
 							}
@@ -55,43 +53,43 @@ public class Kuningatar extends Nappula{
 					}
 					else {
 						if (sijaintiX - x == y - sijaintiY) {
-							return a;
+							return true;
 						}
 						else {
 							if (x < sijaintiX) {
 								if (y < sijaintiY) {
 									if (sijaintiX - x == sijaintiY - y) {
-										return a;
+										return true;
 									}
 									else {
-										return b;
+										return false;
 									}
 							
 								}
 								else {
 									if (sijaintiX - x == y - sijaintiY) {
-										return a;
+										return true;
 									}
 									else {
-										return b;
+										return false;
 									}
 								}
 							}
 							else {
 								if (y < sijaintiY) {
 									if (x - sijaintiX == sijaintiY - y) {
-										return a;
+										return true;
 									}
 									else {
-										return b;
+										return false;
 									}
 								}
 								else {
 									if (x - sijaintiX == y - sijaintiY) {
-										return a;
+										return true;
 									}
 									else {
-										return b;
+										return false;
 									}
 								}
 							}
@@ -101,43 +99,43 @@ public class Kuningatar extends Nappula{
 				else {
 					if (y < sijaintiY) {
 						if (x - sijaintiX == sijaintiY - y) {
-							return a;
+							return true;
 						}
 						else {
 							if (x < sijaintiX) {
 								if (y < sijaintiY) {
 									if (sijaintiX - x == sijaintiY - y) {
-										return a;
+										return true;
 									}
 									else {
-										return b;
+										return false;
 									}
 							
 								}
 								else {
 									if (sijaintiX - x == y - sijaintiY) {
-										return a;
+										return true;
 									}
 									else {
-										return b;
+										return false;
 									}
 								}
 							}
 							else {
 								if (y < sijaintiY) {
 									if (x - sijaintiX == sijaintiY - y) {
-										return a;
+										return true;
 									}
 									else {
-										return b;
+										return false;
 									}
 								}
 								else {
 									if (x - sijaintiX == y - sijaintiY) {
-										return a;
+										return true;
 									}
 									else {
-										return b;
+										return false;
 									}
 								}
 							}
@@ -145,43 +143,43 @@ public class Kuningatar extends Nappula{
 					}
 					else {
 						if (x - sijaintiX == y - sijaintiY) {
-							return a;
+							return true;
 						}
 						else {
 							if (x < sijaintiX) {
 								if (y < sijaintiY) {
 									if (sijaintiX - x == sijaintiY - y) {
-										return a;
+										return true;
 									}
 									else {
-										return b;
+										return false;
 									}
 							
 								}
 								else {
 									if (sijaintiX - x == y - sijaintiY) {
-										return a;
+										return true;
 									}
 									else {
-										return b;
+										return false;
 									}
 								}
 							}
 							else {
 								if (y < sijaintiY) {
 									if (x - sijaintiX == sijaintiY - y) {
-										return a;
+										return true;
 									}
 									else {
-										return b;
+										return false;
 									}
 								}
 								else {
 									if (x - sijaintiX == y - sijaintiY) {
-										return a;
+										return true;
 									}
 									else {
-										return b;
+										return false;
 									}
 								}
 							}
@@ -190,11 +188,11 @@ public class Kuningatar extends Nappula{
 				}
 			}
 			else {
-				return b;
+				return false;
 			}
 		}
 		else {
-			return b;
+			return false;
 		}
 	}
 }
