@@ -42,10 +42,6 @@ public boolean Onkosiirtosallittu(int x, int y) {
 			else {
 				return false;
 			}
-		}
-		else {
-			return false;
-		}
     
     else if (x == sijaintiX || y == sijaintiY) {
 				if (y > 0 && y <= 8 && x > 0 && x <= 8) {
@@ -54,12 +50,10 @@ public boolean Onkosiirtosallittu(int x, int y) {
 				else {
 					return false;
 				}
-			}
+            }
 			else {
 				return false;
 			}
-		}
-		else {
-			return false;
+		
 }
 }
