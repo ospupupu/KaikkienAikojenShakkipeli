@@ -3,8 +3,6 @@ public class Lahetti extends Nappula {
 		super(SijaintiX, SijaintiY, vari, elossa, type);
 	}
 	public boolean Onkosiirtosallittu(int x, int y) {
-		boolean a = true;
-		boolean b = false;
 		if (elossa == 1) {
 			if (y > 0 && y <= 8 && x > 0 && x <= 8) {
 				if (x < sijaintiX) {
