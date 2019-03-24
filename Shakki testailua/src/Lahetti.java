@@ -10,47 +10,47 @@ public class Lahetti extends Nappula {
 				if (x < sijaintiX) {
 					if (y < sijaintiY) {
 						if (sijaintiX - x == sijaintiY - y) {
-							return a;
+							return true;
 						}
 						else {
-							return b;
+							return false;
 						}
 				
 					}
 					else {
 						if (sijaintiX - x == y - sijaintiY) {
-							return a;
+							return true;
 						}
 						else {
-							return b;
+							return false;
 						}
 					}
 				}
 				else {
 					if (y < sijaintiY) {
 						if (x - sijaintiX == sijaintiY - y) {
-							return a;
+							return true;
 						}
 						else {
-							return b;
+							return false;
 						}
 					}
 					else {
 						if (x - sijaintiX == y - sijaintiY) {
-							return a;
+							return true;
 						}
 						else {
-							return b;
+							return false;
 						}
 					}
 				}
 			}
 			else {
-				return b;
+				return false;
 			}
 		}
 		else {
-			return b;
+			return false;
 		}
 	}
 }
